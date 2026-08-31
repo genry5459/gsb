@@ -1,7 +1,8 @@
 [build]
-builder = "DOCKER"
+builder = "NIXPACKS"
 
 [deploy]
-startCommand = "./start.sh"
+startCommand = "python gold_micro_scalper_unified.py"
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 5
+
