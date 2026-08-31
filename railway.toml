@@ -1,0 +1,7 @@
+[build]
+builder = "DOCKER"
+
+[deploy]
+startCommand = "./start.sh"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 5
