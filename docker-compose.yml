@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  scalper:
+    build: .
+    container_name: gold_micro_scalper
+    env_file: .env
+    restart: unless-stopped
+    volumes:
+      - ./gold_micro_scalper.log:/app/gold_micro_scalper.log
+      - ./gold_micro_scalper_state.json:/app/gold_micro_scalper_state.json
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
